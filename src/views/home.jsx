@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { editUsername } from "../store/actionCreator";
 import Swal from "sweetalert2";
 
 export default function Home() {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const [username, setUsername] = useState("");
 
@@ -16,9 +19,14 @@ export default function Home() {
         text: `Please input your username`,
       });
     else {
-      history.push("/repoview");
+      dispatch(editUsername(username));
+      history.push("/repoviewer");
     }
   };
+
+  useEffect(() => {
+    dispatch(editUsername(""));
+  }, []);
 
   return (
     <>
