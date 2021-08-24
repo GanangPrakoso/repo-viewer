@@ -1,9 +1,14 @@
-body {
+#home {
   height: 100vh;
   /* background-image: url('./assets/landingPage.jpg'); */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./assets/github_wallpaper.jpg");
   background-size: cover;
+}
+
+body {
+  height: 100vh;
+  background-color: #000000;
 }
 
 /* STRUCTURE */
@@ -278,7 +283,7 @@ input[type="text"]:placeholder {
 .course h6 {
   opacity: 0.6;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   text-transform: uppercase;
 }
 
@@ -314,4 +319,10 @@ input[type="text"]:placeholder {
   padding: 7px 20px;
 
   letter-spacing: 1px;
+}
+
+#loading {
+  padding-top: 30vh;
+  display: flex;
+  justify-content: space-around;
 }

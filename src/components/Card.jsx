@@ -1,18 +1,18 @@
 import React from "react";
 
-export default function Card() {
+export default function Card(props) {
+  const { name, description, htmlUrl } = props;
+
   return (
     <>
       <div className="course">
         <div className="course-preview">
           <h6>Repo name</h6>
-          <h5>JavaScript Fundamentals</h5>
+          <h5>{name}</h5>
         </div>
         <div className="course-info">
           <h6>Description</h6>
-          <i>
-            a collaborative platform for bedroom musician. built using react,
-          </i>
+          <i>{description ?? "no description given"}</i>
           <div
             style={{
               display: "flex",
@@ -20,7 +20,9 @@ export default function Card() {
               marginTop: 10,
             }}
           >
-            <button className="btn">See repo</button>
+            <a href={htmlUrl} target="_blank" rel="noopener noreferrer">
+              <button className="btn">See repo</button>
+            </a>
           </div>
         </div>
       </div>

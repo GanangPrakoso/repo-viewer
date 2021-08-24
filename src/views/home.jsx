@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div id="home">
       <div className="wrapper fadeInDown" style={{ height: "80vh" }}>
         <div id="formContent">
           <form
@@ -53,6 +53,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
