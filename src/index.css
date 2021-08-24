@@ -1,4 +1,4 @@
-#home {
+body {
   height: 100vh;
   /* background-image: url('./assets/landingPage.jpg'); */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -247,4 +247,71 @@ input[type="text"]:placeholder {
   width: 100%;
 }
 
-/* OTHERS */
+/* CARD */
+
+* {
+  box-sizing: border-box;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.cards-container::after {
+  /* content: ""; */
+  flex: auto;
+}
+
+.course {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 400px;
+  margin: 20px;
+  overflow: hidden;
+  width: 400px;
+}
+
+.course h6 {
+  opacity: 0.6;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.course-preview {
+  background-color: #2a265f;
+  color: #fff;
+  padding: 30px;
+  max-width: 250px;
+}
+
+.course-preview a {
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.course-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.btn {
+  background-color: #2a265f;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 7px 20px;
+
+  letter-spacing: 1px;
+}

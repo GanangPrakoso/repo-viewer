@@ -30,32 +30,26 @@ export default function Home() {
 
   return (
     <>
-      <div id="home">
-        <div className="wrapper fadeInDown" style={{ height: "80vh" }}>
-          <div id="formContent">
-            <form
-              style={{ paddingTop: 30, height: "initial" }}
-              onSubmit={(e) => handleUsernameInput(e)}
-            >
-              <input
-                type="text"
-                id="username"
-                className="fadeIn second"
-                name="username"
-                placeholder="Github username"
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                type="submit"
-                className="fadeIn fourth"
-                value="View repo"
-              />
-            </form>
-            <div id="formFooter">
-              <a className="underlineHover" style={{ cursor: "pointer" }}>
-                Input your github username to see your repos
-              </a>
-            </div>
+      <div className="wrapper fadeInDown" style={{ height: "80vh" }}>
+        <div id="formContent">
+          <form
+            style={{ paddingTop: 30, height: "initial" }}
+            onSubmit={(e) => handleUsernameInput(e)}
+          >
+            <input
+              type="text"
+              id="username"
+              className="fadeIn second"
+              name="username"
+              placeholder="Github username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input type="submit" className="fadeIn fourth" value="View repo" />
+          </form>
+          <div id="formFooter">
+            <a className="underlineHover" style={{ cursor: "pointer" }}>
+              Input your github username to see your repos
+            </a>
           </div>
         </div>
       </div>
